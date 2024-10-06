@@ -3,7 +3,7 @@
 ## 本篇来源于 https://www.cnblogs.com/sh1ny2/p/14042842.html
 
 ```
-上传 CentOS-7-x86_64-DVD-1511.iso , gpmall-cloud.tar.gz ,成功后默认账号密码为test/test
+上传 CentOS-7-x86_64-DVD-1511.iso , gpmall-cloud.tar.gz , mysql-community-release-el6-5.noarch.rpm 成功后默认账号密码为test/test
 ```
 
 * ### 基础环境
@@ -40,7 +40,11 @@ enabled=1
 > > 2. 安装redis缓存 `yum install redis -y` 若出现显示无包的情况可先安装 `EPEL` 仓库 `yum install epel-release -y`
 > > 3. 安装Elasticsearch服务 `yum install elasticsearch -y` 也可不安装 若出现无包的情况可通过上传`elasticsearch-8.5.2-x86_64.rpm`进行安装
 > > 4. 安装nginx服务 `yum install nginx -y`
-> > 5. 安装MariaDB数据库 `yum install mariadb mariadb-server -y`
+> > 5. ~~安装MariaDB数据库 `yum install mariadb mariadb-server -y`~~
+> > > - 这里由于默认安装的版本太新, 这里建议5.6
+> > > - `yum install mysql-community-release-el6-5.noarch.rpm -y`或者 `rpm -ivh mysql-community-release-el6-5.noarch.rpm`
+> > > - `yum install mysql-community-server`
+
 > > 6. 安装ZooKeeper服务
 > > > -  `tar -xzvf gpmall-cloud/zookeeper-3.4.14.tar.gz -C /opt/`
 > > > - `cd /opt/zookeeper-3.4.14/conf`
