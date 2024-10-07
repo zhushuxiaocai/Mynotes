@@ -41,7 +41,7 @@ enabled=1
 > > 3. 安装Elasticsearch服务 `yum install elasticsearch -y` 也可不安装 若出现无包的情况可通过上传`elasticsearch-8.5.2-x86_64.rpm`进行安装
 > > 4. 安装nginx服务 `yum install nginx -y`
 > > 5. ~~安装MariaDB数据库 `yum install mariadb mariadb-server -y`~~
-> > > - 这里由于默认安装的版本太新, 这里建议5.6
+> > > - 由于默认安装的版本太新, 建议安装5.6版本
 > > > - `yum install mysql-community-release-el6-5.noarch.rpm -y`或者 `rpm -ivh mysql-community-release-el6-5.noarch.rpm`
 > > > - `yum install mysql-community-server`
 
