@@ -71,7 +71,7 @@ character-set-server=utf8
 collation-server=utf8_unicode_ci
 skip-character-set-client-handshake
 ```
-> > > - `systemctl start mariadb`
+> > > - `systemctl start mysqld`
 > > > - `mysqladmin -uroot password Root123456`
 > > > - `mysql -uroot -pRoot123456`
 > > > - `GRANT ALL PRIVILEGES ON *.* TO 'root'@'ip-you' IDENTIFIED BY 'Root123456' WITH GRANT OPTION;`
