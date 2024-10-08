@@ -3,7 +3,7 @@
 ## 本篇来源于 https://www.cnblogs.com/sh1ny2/p/14042842.html
 
 ```
-上传 CentOS-7-x86_64-DVD-1511.iso , gpmall-cloud.tar.gz , mysql-community-release-el6-5.noarch.rpm 成功后默认账号密码为test/test
+上传 CentOS-7-x86_64-DVD-1511.iso , Centos-7.repo , gpmall-cloud.tar.gz , mysql-community-release-el6-5.noarch.rpm 成功后默认账号密码为test/test
 ```
 
 * ### 基础环境
@@ -20,7 +20,8 @@
 
 - > 挂载镜像,配置本地yum源,备份原文件
 > > 1. `mount /root/CentOS-7-x86_64-DVD-1511.iso /opt/centos/`
-> > 2. `vi /etc/yum.repos.d/local.repo`
+> > 2. `cp Cento-7.repo /etc/yum.repos.d/`
+> > 3. `vi /etc/yum.repos.d/local.repo`
 ```yaml
 [centos]
 name=centos
