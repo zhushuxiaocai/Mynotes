@@ -20,7 +20,7 @@
 
 - > 挂载镜像,配置本地yum源,备份原文件
 > > 1. `mount /root/CentOS-7-x86_64-DVD-1511.iso /opt/centos/`
-> > 2. `cp Cento-7.repo /etc/yum.repos.d/`
+> > 2. `cp Centos-7.repo /etc/yum.repos.d/`
 > > 3. `vi /etc/yum.repos.d/local.repo`
 ```yaml
 [centos]
