@@ -104,7 +104,7 @@ istioctl proxy-config endpoints <pod-name> [flags]     #检索特定Pod中Envoy�
 
 >`cp harbor-offline.tar.gz /opt/`
 >
-> `kubeeasy add --registry harbor` 安装并查看状态 master\_ip访问，helm
+> `kubeeasy add --registry harbor` 安装并查看状态 master\_ip访问
 
 ```yaml
 helm version        #查看版本
