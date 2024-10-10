@@ -60,11 +60,7 @@ spec:                                 # Pod 的规范部分，配置和行为
 * #### 部署Kubevirt
 
 > `cp /mnt/kubevirt.tar.gz /root/`
-
-> `tar -xzvf kubevirt.tar.gz`
-
-> `cp /root/kubevirt/tools/virtctl-v0.47.1-linux-amd64 /bin/kubevirt`
-
+> 
 > kubeeasy add --virt kubevirt **#kubeeasy add --名 值**
 >
 > > 查看 `kubectl -n kubevirt get pods`
@@ -81,10 +77,9 @@ spec:                                 # Pod 的规范部分，配置和行为
 
 * #### 部署istio
 
-> cp 到 root 目录下
-> `tar -xzvf istio.tar.gz`
-> `cp istio/tools/_istioctl /bin/`
-kubeeasy add --istio istio安装，kubectl -n istio-system get pods查看pod，通istioctl version查看istio版本，master\_ip:33000访问grafana，:30090访问prometheus，:30686访问jaeger，:20001访问kiali，
+> `cp istio.tar.gz /opt/`
+> 
+> kubeeasy add --istio istio安装，kubectl -n istio-system get pods查看pod，通istioctl version查看istio版本，master\_ip:33000访问grafana，:30090访问prometheus，:30686访问jaeger，:20001访问kiali，
 
 ```yaml
 istioctl profile list          #istio配置档的名称
@@ -107,7 +102,9 @@ istioctl proxy-config endpoints <pod-name> [flags]     #检索特定Pod中Envoy�
 
 * #### 部署harbor
 
-kubeeasy add --registry harbor安装并查看状态 master\_ip访问，helm
+>`cp harbor-offline.tar.gz /opt/`
+>
+> `kubeeasy add --registry harbor` 安装并查看状态 master\_ip访问，helm
 
 ```yaml
 helm version        #查看版本
